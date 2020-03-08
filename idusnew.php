@@ -1,10 +1,10 @@
  
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "idusnew";
+$servername = "it330serve130.mysql.database.azure.com";
+$username = "johnryan@it330serve130";
+$password = "Animalka123";
+$dbname = "itazure";
 
 $Rollno='';
 $fname="";
@@ -40,7 +40,7 @@ function getdata(){
 	if (isset($_POST['search'])) {
 		# code...
 		$info = getData();
-		$search_query="SELECT * FROM `idusnew` WHERE Rollno = '$info[0]'";
+		$search_query="SELECT * FROM `test` WHERE Rollno = '$info[0]'";
 		$search_result=mysqli_query($conn,$search_query);
 			if ($search_result) {
 				# code...
@@ -68,7 +68,7 @@ function getdata(){
 	if (isset($_POST['insert'])) {
 		# code...
 		$info = getData();
-		$insert_query="INSERT INTO `idusnew`( `fname`, `lname`, `address`, `email`) VALUES ('$info[1]','$info[2]','$info[3]','$info[4]')";
+		$insert_query="INSERT INTO `test`( `fname`, `lname`, `address`, `email`) VALUES ('$info[1]','$info[2]','$info[3]','$info[4]')";
 			try{
 				$insert_result=mysqli_query($conn,$insert_query);
 				if ($insert_query) {
@@ -89,7 +89,7 @@ function getdata(){
 	if (isset($_POST['delete'])) {
 		# code...
 		$info = getData();
-		$delete_query ="DELETE FROM `idusnew` WHERE Rollno = '$info[0]'";
+		$delete_query ="DELETE FROM `test` WHERE Rollno = '$info[0]'";
 
 		try{
 			$delete_result = mysqli_query($conn,$delete_query);
@@ -111,7 +111,7 @@ function getdata(){
 	if (isset($_POST['update'])) {
 		# code...
 		$info = getdata(); 
-		$update_query= "UPDATE `idusnew` SET `fname`='$info[1]',`lname`='$info[2]',`address`='$info[3]',`email`='$info[4]' WHERE Rollno ='$info[0]'";
+		$update_query= "UPDATE `test` SET `fname`='$info[1]',`lname`='$info[2]',`address`='$info[3]',`email`='$info[4]' WHERE Rollno ='$info[0]'";
 		try{
 			$update_result = mysqli_query($conn,$update_query);
 			if ($update_result) {
@@ -154,7 +154,7 @@ function getdata(){
 
 
 	//show result
-	$sql = "SELECT Rollno, fname, lname, address, email  FROM idusnew";
+	$sql = "SELECT Rollno, fname, lname, address, email  FROM test";
 	$result = mysqli_query($conn, $sql);
 
 	if (mysqli_num_rows($result) > 0) {
