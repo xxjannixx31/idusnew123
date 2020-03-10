@@ -135,7 +135,7 @@ function getdata(){
 <body>
   <h2 <div class="card-header">Ycong John Ryan . Laboratory 1</div></h2>
 <form method="post" action="idusnew.php">
-
+  <h2 class="title text-center border-bottom">Azure Activity Payroll</h2>
 	<table>
 	<thead>
 		<tr>
