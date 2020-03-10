@@ -133,7 +133,7 @@ function getdata(){
 
 <html>
 <body>
-
+  <h2 <div class="card-header">Ycong John Ryan . Laboratory 1</div></h2>
 <form method="post" action="idusnew.php">
 
 	<table>
@@ -193,7 +193,7 @@ function getdata(){
 		<input type="submit" name="update"	value="Update">
 		<input type="submit" name="delete" value="Delete">
 		-->
-		<input type="submit" name="search" value="Find">
+		<input type="submit" name="search" value="Search">
 		
 	</div>
 </form>
