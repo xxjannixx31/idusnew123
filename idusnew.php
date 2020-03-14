@@ -133,7 +133,7 @@ function getdata(){
 
 <html>
 <body>
-  <h2 >Ycong John Ryan . Laboratory 3</div></h2>
+
 <form method="post" action="idusnew.php">
   
 	<table>
